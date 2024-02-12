@@ -17,7 +17,7 @@ services:
     volumes:
       - /var/lib/marzban-node:/var/lib/marzban-node
 EOF
-
+mkdir -p /var/lib/marzban-node
 cat << EOF > /var/lib/marzban-node/ssl_client_cert.pem
 -----BEGIN CERTIFICATE-----
 MIIEnDCCAoQCAQAwDQYJKoZIhvcNAQENBQAwEzERMA8GA1UEAwwIR296YXJnYWgw
