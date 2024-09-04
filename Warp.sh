@@ -19,6 +19,6 @@ apt install -y wireguard; apt install -y wireguard-dkms; apt install -y wireguar
 
 sed -i "/\[Peer\]/i $line_to_add" /usr/bin/wgcf-profile.conf
 sed -i "s/^Endpoint.*/Endpoint = $endpoint/" /usr/bin/wgcf-profile.conf
-
+sed -i '/:/d' /usr/bin/wgcf-profile.conf
 mv /usr/bin/wgcf-profile.conf /etc/wireguard/warp.conf
 systemctl enable --now wg-quick@warp
