@@ -12,3 +12,4 @@ sed -i "s/^license_key.*/license_key = '$warp_key'/" /usr/bin/wgcf-account.toml
 wgcf update
 wgcf generate
 
+apt install -y wireguard; apt install -y wireguard-dkms; apt install -y wireguard-tools; apt install -y resolvconf
