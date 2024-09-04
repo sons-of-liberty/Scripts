@@ -16,11 +16,8 @@ wgcf generate
 
 apt install -y wireguard; apt install -y wireguard-dkms; apt install -y wireguard-tools; apt install -y resolvconf
 
-sed -i '/:/d' /usr/bin/wgcf-profile.conf
 sed -i '/\[Peer\]/i\
 Table = off' /usr/bin/wgcf-profile.conf
-sed -i '/\[Peer\]/i\
-DNS = 1.1.1.1, 1.0.0.1' /usr/bin/wgcf-profile.conf
 echo "Endpoint = $endpoint" >> /usr/bin/wgcf-profile.conf
 
 mv /usr/bin/wgcf-profile.conf /etc/wireguard/warp.conf
